@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<form #f="ngForm" (ngSubmit)="onsubmit()"><br>
+    <label for="fname">NAME:</label><br>
+    <input type="text" id ="fname" name="fname" [(ngModel)]="Hotel.HotelName" #NameModel="ngModel" required minlength="5" maxlength="30"><br><br>
+    <div *ngIf="NameModel.errors && (NameModel.dirty || NameModel.touched)" class="alert alert-danger">
+        <div [hidden]="!NameModel.errors['required']">
+            Hotel Name is required!
+          </div>
+          <div [hidden]="!NameModel.errors['minlength']">
+            Hotel Name be at least 5 characters long.
+          </div>
+          <div [hidden]="!NameModel.errors['maxlength']">
+            Hotel Name not allowed more than 30 characters long.
+          </div>
+    </div>
+    <label for="Rooms">CHOOSE NUMBER OF ROOMS:</label><br>
+            <select id="number of Rooms" name="number of Rooms">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="7">8</option>
+            </select><br><br>
+            <label>ROOM TYPE:</label><br>
+            <input type="radio" id="Single" name="fav-language" value="Single" [(ngModel)]="Hotel.RoomType">
+            <label for="Single">Single</label><br>
+            <input type="radio" id="Double" name="fav-language" value="Double" [(ngModel)]="Hotel.RoomType">
+            <label for="Double">Double</label><br><br>
+            <label>ADDRESS:</label><br>
+            <textarea name="message" rows="20" cols="20" [(ngModel)]="Hotel.Address"></textarea><br><br>
+            <label>EMAIL:</label><br>
+            <input type="text" id="Ename" name="Ename" [(ngModel)]="Hotel.Email" #email="ngModel" email="@gmail.com" required><br>
+            <div *ngIf="email.errors && email.touched" class="alert alert-danger">
+                <div [hidden]="!email.errors['required']">
+                    Email is required!
+                </div>
+                <div [hidden]="!email.errors['email']">
+                    Not a Valid Email.
+                </div>
+            </div><br><br>
+            <input type="submit" value="Submit">
+</form>
+</body>
+</html>

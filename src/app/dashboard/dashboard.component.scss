@@ -1,0 +1,21 @@
+.nav {
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Style the links in the navigation menu */
+.nav a {
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+/* Style the active link in the navigation menu */
+.nav a.active {
+  background-color: #4CAF50;
+}

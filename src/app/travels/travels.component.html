@@ -1,0 +1,35 @@
+<form [formGroup]="form" class="form-control">
+  <div class="form-group">
+    <table>
+        <tr><th><label class="">Travel Name :</label></th>
+        <td><input type="text" class="form-control" formControlName="travelName" placeholder="Travel Name"></td></tr>
+          <div class="alert alert-danger" role="alert"  *ngIf="form.get('travelName')?.touched && form.get('travelName')?.errors?.['required']">
+            Travel Name is required 
+          </div>
+        <div formArrayName="emails">
+          <div  *ngFor="let email of emailControls();let i=index" [formGroupName]="i">
+        <tr><th><label class="email">Email :</label></th>
+        <td><input type="email" class="form-control" formControlName="email" placeholder="Email"></td>
+        <td><button type="button" (click)="addEmail(i)">Add Email</button></td>
+        <td><button type="button" (click)="removeEmail(i)">Remove Email</button></td></tr>
+            <div *ngIf="email.get('email')?.invalid && (email.get('email')?.dirty || email.get('email')?.touched)" class="alert alert-danger">
+              <div *ngIf="email.get('email')?.errors?.['required']"> Email required</div>
+              <div *ngIf="email.get('email')?.errors?.['email']"> Email format improper</div>
+            </div>
+          </div>
+        </div>
+        <tr><th><label class="">Password :</label></th>
+        <td><input type="password" class="form-control" formControlName="password" placeholder="Password"></td>
+          <div class="alert alert-danger" role="alert" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">
+            Password is required 
+          </div></tr>
+        <tr><th><label class="">Confirm Password :</label></th>
+        <td><input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password"></td>
+          <div class="alert alert-danger" role="alert" *ngIf="form.get('confirmPassword')?.touched && form.get('confirmPassword')?.errors?.['required']">
+            Confirm password is required 
+          </div></tr>
+        <input type="submit" value="Submit">
+    </table>
+  </div>
+</form>
+  

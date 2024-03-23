@@ -1,0 +1,19 @@
+    <div  class="nav">
+        <a href="#" routerLink="/dashboard/places">Places</a>
+        <a href="#" routerLink="/dashboard/flight">Flight</a>
+        <a href="#" routerLink="/dashboard/package">Package</a>
+        <a href="#" routerLink="/dashboard/travels">Travels</a>
+        <a href="#" routerLink="/dashboard/hotel">Hotel</a>
+    </div>
+
+    <!-- <div> 
+        <ul *ngFor="let i of Places">
+            <li>{{i.Name}}</li>
+        </ul>
+    </div> -->
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <app-footer></app-footer>
