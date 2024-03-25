@@ -1,0 +1,47 @@
+.flight-component {
+    margin-top: 20px; /* Add some top margin for spacing */
+    padding: 20px;
+    background-color: #fff; /* White background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    max-width: 400px; /* Limit component width for better readability */
+    margin: 0 auto; /* Center component horizontally */
+  }
+  
+  .flight-component h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing below the title */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Add spacing between form groups */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  

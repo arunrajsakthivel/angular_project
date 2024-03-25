@@ -1,53 +1,38 @@
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    font-size: 14px;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #f00;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 10px 0; /* Add padding above and below */
+}
+
+.container {
+  max-width: auto; /* Set max width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 15px; /* Add padding to the sides */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Space items evenly */
+}
+
+.col-md-6 {
+  width: calc(50% - 15px); /* 50% width with margin between columns */
+}
+
+h3 {
+  color: #fff; /* White text color for headings */
+}
+
+p {
+  margin-bottom: 3px; /* Add spacing between paragraphs */
+}
+
+.text-center {
+  text-align: center; /* Center-align text */
+}
+
+hr {
+  border-top: 1px solid #555; /* Darker border color */
+  margin: 10px 0; /* Add spacing above and below */
+}

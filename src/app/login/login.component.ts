@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Router} from '@angular/router'
-import{FormsModule} from '@angular/forms'
-import { BrowserModule } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,28 +7,33 @@ import { BrowserModule } from '@angular/platform-browser';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  public UserName:string;
-  public Password:string;
+  public userName: string;
+  public password: string;
+  public errorMessage: string;
 
-  public constructor(private router:Router)
-  {
-    this.UserName="Karthik";
-    this.Password='';
+  constructor(private router: Router) {
+    this.userName = '';
+    this.password = '';
+    this.errorMessage = '';
   }
 
-  Login():void
-  {
-    if(this.UserName.toLowerCase()=="admin" && this.Password=="Admin123")
-    {
-        this.router.navigate(['/dashboard/places']);
-        localStorage.setItem("IsAuthorized","true");
-        localStorage.setItem('IsAdmin',"true");
+  login(): void {
+    // Perform basic validation
+    if (!this.userName || !this.password) {
+      this.errorMessage = 'Please enter both username and password.';
+      return;
     }
-    else if(this.UserName.toLowerCase()=="karthik" && this.Password=="Karthik123")
-    {
+
+    // Example authentication logic (replace this with your actual authentication logic)
+    if (this.userName.toLowerCase() === 'admin' && this.password === 'Admin123') {
       this.router.navigate(['/dashboard/places']);
-      localStorage.setItem("IsAuthorized","true");
+      localStorage.setItem('IsAuthorized', 'true');
+      localStorage.setItem('IsAdmin', 'true');
+    } else if (this.userName.toLowerCase() === 'karthik' && this.password === 'Karthik123') {
+      this.router.navigate(['/dashboard/places']);
+      localStorage.setItem('IsAuthorized', 'true');
+    } else {
+      this.errorMessage = 'Invalid username or password. Please try again.';
     }
   }
-
 }

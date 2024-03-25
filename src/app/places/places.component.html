@@ -1,6 +1,11 @@
-<div class="places-component">
-    <h2>{{title}}</h2>
-    <ul>
-      <li appHighlight *ngFor="let place of places">{{place}}</li>
-    </ul>
+<div class="places-container">
+  <div class="place" *ngFor="let place of places">
+    <img [src]="place.image" alt="{{ place.name }}">
+    <div class="place-info">
+      <h3>{{ place.name }}</h3>
+      <p class="short-description">{{ place.description }}</p>
+      <p class="full-description" [hidden]="!place.showFullDescription">{{ place.fullDescription }}</p>
+      <button (click)="toggleDescription(place)">Learn More</button>
+    </div>
   </div>
+</div>
