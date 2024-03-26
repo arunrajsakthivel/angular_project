@@ -15,10 +15,15 @@ constructor(){
   this.HotelCollection=[];
 } 
 onsubmit(){
-  alert(this.Hotel.HotelName);
-  alert(this.Hotel.RoomType);
-  alert(this.Hotel.Address);
-  alert(this.Hotel.Email);
+  alert(
+  "Entered your Name is: "+this.Hotel.HotelName+"\n"+
+  "No of your Booking rooms are: "+this.Hotel.Rooms+"\n"+
+  "Selected room Type is: "+this.Hotel.RoomType+"\n"+
+  "Entered your Address is: "+this.Hotel.Address+"\n"+
+  "Entered your email id: "+this.Hotel.Email
+  );
+ 
+  alert("Thank you for booking. We received your booking, Once your booking is confirmed we will notify you as soon.");
 }
 
 }

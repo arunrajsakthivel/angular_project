@@ -1,11 +1,15 @@
 <div class="package-component">
-    <h2>{{title}}</h2>
-    <ul>
-      <li *ngFor="let package of packages">
-        <h3>{{package.name}}</h3>
-        <p>{{package.description}}</p>
-        <button (click)="packageClicked(package.id)">View Details</button>
-      </li>
-    </ul>
+  <div class="scale"><h2>{{ title }}</h2></div>  
+  <div class="packages-list">
+    <div *ngFor="let package of packages" class="package-item">
+      <h3>{{ package.name }}</h3>
+      <p>{{ package.description }}</p>
+      <button (click)="viewDetails(package.id)" class="details-btn">View Details</button>
+      <div *ngIf="selectedPackageId === package.id" class="details">
+        <p><strong>Price:</strong> {{ package.price }}</p>
+        <p><strong>Duration:</strong> {{ package.duration }}</p>
+        <p><strong>Destinations:</strong> {{ package.destinations.join(', ') }}</p>
+      </div>
+    </div>
   </div>
-  
+</div>

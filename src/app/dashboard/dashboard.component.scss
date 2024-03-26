@@ -1,5 +1,8 @@
 /* Navigation Bar */
 .nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: #333;
   overflow: hidden;
 }
@@ -10,7 +13,7 @@
   color: white;
   text-align: center;
   padding: 14px 20px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .nav a:hover {
@@ -25,9 +28,9 @@
 
 /* Bootstrap Classes */
 .navbar {
-  margin-bottom: 20px; /* Adjust margin for consistency */
+  margin-bottom: 20px; 
 }
 
 .card {
-  margin-bottom: 20px; /* Adjust margin for consistency */
+  margin-bottom: 20px; 
 }

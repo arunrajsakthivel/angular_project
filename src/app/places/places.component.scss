@@ -3,15 +3,17 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    box-shadow: 5px 5px 10px #888888;
   }
   
   .place {
     width: 300px;
+    height: auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
   
   .place:hover {
@@ -36,11 +38,11 @@
   }
   
   .full-description {
-    //display: none; /* Initially hidden */
     margin-bottom: 10px;
   }
   
   button {
+    position: relative;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -51,5 +53,10 @@
   
   button:hover {
     background-color: #0056b3;
+  }
+
+  img{
+    width: auto;
+    height: 200px;
   }
   
