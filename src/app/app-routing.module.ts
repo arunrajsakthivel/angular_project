@@ -9,6 +9,7 @@ import { TravelsComponent } from './travels/travels.component';
 import { LoginComponent } from './login/login.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { AuthGuard } from './auth.guard';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard],
@@ -29,6 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }
