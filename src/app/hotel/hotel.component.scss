@@ -21,22 +21,37 @@
     border-radius: 5px;
   }
   
-  input[type="submit"] {
+  input[type="submit"],button {
     background-color: #007bff;
     color: #fff;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
   }
   
-  input[type="submit"]:hover {
+  input[type="submit"],button:hover {
     background-color: #0056b3;
   }
   
   .error-msg {
     color: red;
-    font-size: 14px;
+    font-size: 0.9em;
+  }
+  
+  .email {
+    font-weight: bold;
+  }
+  
+  .alert {
+    margin-top: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 5px;
     margin-bottom: 10px;
   }
+  
   
