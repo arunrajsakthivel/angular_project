@@ -8,7 +8,8 @@
       <div *ngIf="selectedPackageId === package.id" class="details">
         <p><strong>Price:</strong> {{ package.price }}</p>
         <p><strong>Duration:</strong> {{ package.duration }}</p>
-        <p><strong>Destinations:</strong> {{ package.destinations.join(', ') }}</p>
+        <p><strong>Destinations:</strong> {{ package.destinations.join(', ') }}</p><br>
+        <button (click)="bookPackage(package.id)" class="details-btn">Book A Package</button>
       </div>
     </div>
   </div>

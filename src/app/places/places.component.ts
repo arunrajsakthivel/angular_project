@@ -88,7 +88,6 @@ export class PlacesComponent {
   ];
 
   toggleDescription(place: Place): void {
-    // Toggle the visibility of full description for the given place
     place.showFullDescription = !place.showFullDescription;
   }
 }

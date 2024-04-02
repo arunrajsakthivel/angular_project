@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height of the viewport */  
+  height: 100vh;
 }
 
 /* Login form styles */
@@ -12,14 +12,14 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #888888;
-  background-color: #ffffff71; /* White background color for the form */
+  background-color: #ffffff71;
 }
 
 /* Login header styles */
 .login-header {
   text-align: center;
   color: #333;
-  margin-bottom: 20px; /* Add spacing below the header */
+  margin-bottom: 20px;
 }
 
 /* Input group styles */
@@ -52,11 +52,11 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff; /* Blue background color for the button */
-  color: #fff; /* White text color for the button */
+  background-color: #007bff; 
+  color: #fff; 
   cursor: pointer;
 }
 
 .login-btn:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
+  background-color: #0056b3; 
 }

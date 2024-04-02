@@ -48,9 +48,9 @@ export class HotelComponent {
 
   onSubmit(): void {
     if (this.form.valid) {
-      // Do something with the form data
+      
       } else {
-      // Show validation errors
+      
       }
   }
 }

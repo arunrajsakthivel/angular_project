@@ -18,13 +18,12 @@ export class LoginComponent {
   }
 
   login(): void {
-    // Perform basic validation
+    
     if (!this.userName || !this.password) {
       this.errorMessage = 'Please enter both username and password.';
       return;
     }
 
-    // Example authentication logic (replace this with your actual authentication logic)
     if (this.userName.toLowerCase() === 'admin' && this.password === 'Admin123') {
       this.router.navigate(['/dashboard/places']);
       localStorage.setItem('IsAuthorized', 'true');

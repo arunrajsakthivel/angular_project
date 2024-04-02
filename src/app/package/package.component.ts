@@ -65,8 +65,7 @@ export class PackageComponent {
       price: '55,000 INR',
       duration: '4 days',
       destinations: ['Amsterdam', 'Barcelona', 'Prague']
-    },
-    // Add more packages as needed...
+    }
   ];
 
   selectedPackageId: number | null = null;
@@ -76,6 +75,20 @@ export class PackageComponent {
       this.selectedPackageId = null;
     } else {
       this.selectedPackageId = packageId;
+    }
+  }
+
+  bookPackage(packageId: number): void {
+    const selectedPackage = this.packages.find(pkg => pkg.id === packageId);
+    if (selectedPackage) {
+      alert(`You are trying to book ${selectedPackage.name}. Details:\n\n` +
+        `Description: ${selectedPackage.description}\n` +
+        `Price: ${selectedPackage.price}\n` +
+        `Duration: ${selectedPackage.duration}\n` +
+        `Destinations: ${selectedPackage.destinations.join(', ')}`);
+      alert('Once Your booking is confirmed, We will notify as soon... Thank You...');
+    }else{
+      alert('OOPS! Something Error!!');
     }
   }
 }
